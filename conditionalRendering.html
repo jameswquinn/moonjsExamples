@@ -1,0 +1,15 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<div id="app5">
+  <p m-if="condition">The Condition is True!</p>
+</div>
+<script>
+const app5 = new Moon({
+  el: "#app5",
+  data : {
+    condition: true
+  }
+});
+</script>
+<!-- in console: app5.set('condition', false) -->
+</body>

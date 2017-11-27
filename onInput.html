@@ -1,0 +1,21 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<div id="app">
+  <p>{{count}} <input type='text' placeholder='type something here...' m-model="inputvar" m-on:input="keyup"></p>
+  <p>{{inputvar}}</p>
+</div>
+<script>
+const app7 = new Moon({
+  el: "#app",
+  data: {
+    count: 0,
+    inputvar: ''
+  },
+  methods: {
+    keyup: function() {
+      this.set('count', this.get('inputvar').length);
+    }
+  }
+});
+</script>
+</body>

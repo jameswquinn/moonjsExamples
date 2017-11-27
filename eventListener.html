@@ -1,0 +1,21 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<div id="app7">
+  <p>{{count}}</p>
+  <button m-on:click="increment">Increment</button>
+</div>
+<script>
+const app7 = new Moon({
+  el: "#app7",
+  data: {
+    count: 0
+  },
+  methods: {
+    increment: function() {
+      // Increment the count by one
+      this.set('count', this.get('count') + 1);
+    }
+  }
+});
+</script>
+</body>

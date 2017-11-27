@@ -1,0 +1,31 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<div id="app">
+  <p>{{count}} <input m-model="inputvar"></p>
+  <button m-on:click="increment">Increment</button>
+  <button m-on:click="reset">Reset</button>
+  <p>{{inputvar}}</p>
+  <div m-if="count !==0">
+    Count is not 0.
+  </div>
+</div>
+<script>
+const app7 = new Moon({
+  el: "#app",
+  data: {
+    count: 0,
+    inputvar: ''
+  },
+  methods: {
+    increment: function() {
+      // Increment the count by one
+      this.set('count', this.get('count') + 1);
+    },
+    reset: function() {
+      this.set('count', 0);
+      this.set('inputvar', '');
+    }
+  }
+});
+</script>
+</body>

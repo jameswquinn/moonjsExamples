@@ -1,0 +1,23 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<script src="https://unpkg.com/moon-bars"></script>
+<div id="app1">
+  <p>{{msg}}</p>
+
+  <bars
+  m-literal:data="[5, 7, 4, 3, 5]"
+  m-literal:fill="['#7bddd3', '#079af9']"
+  height="100"
+  width="300">
+  </bars>
+</div>
+<script>
+Moon.use(MoonBars);
+const app1 = new Moon({
+  el: "#app1",
+  data: {
+    msg: "Hello Moon!"
+  }
+});
+</script>
+</body>

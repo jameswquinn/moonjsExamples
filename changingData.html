@@ -1,0 +1,15 @@
+<body>
+<script src="https://unpkg.com/moonjs"></script>
+<div id="app2">
+  <p>{{msg}}</p>
+</div>
+<script>
+const app2 = new Moon({
+  el: "#app2",
+  data: {
+    msg: "Hello Moon!"
+  }
+});
+app2.set('msg', "Changed Message!");
+</script>
+</body>
